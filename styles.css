@@ -1,6 +1,11 @@
+:root {
+  --blue: #1e90ff;
+  --white: #ffffff; 
+}
+
 body {
     text-align: center;
-    background-color: lightskyblue;
+    background-color: var(--blue);
   }
 
   div {
@@ -15,7 +20,7 @@ body {
   .section-style {
     margin-right: 25px;
     margin-left: 25px;
-    background-color: white;
+    background-color: var(--white);
   }
 
   

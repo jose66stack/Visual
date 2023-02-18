@@ -7,14 +7,11 @@ const Jenny = "23";
 const combined = John + Jan + Jim + Juan + Jenny;
 console.log(combined);
 
-// concatenated string variable
-
 function myFunction() {
   let age = document.getElementById("age").value;
   let voteable = age < 18 ? "Too young" : "Old enough";
   document.getElementById("demo").innerHTML = voteable + " to drive.";
 }
-// if conditional statement
 
 let day;
 switch (new Date().getDay()) {
@@ -41,16 +38,35 @@ switch (new Date().getDay()) {
 }
 document.getElementById("demo3").innerHTML = "Today is " + day;
 
-//switch statement
+let Text = "";
+for (let x = 2; x < 8; x++) {
+  Text += x + " days has passed" + "<br>";
+}
+document.getElementById("demo2").innerHTML = Text;
 
-let str = "Sunday, Monday, Thursday";
-document.getElementById("demo2").innerHTML = str.substr(7);
+//for loop
 
-//string method
+const people = ["Rose", "Savannah", "Gabe", "Ferb"];
 
-document.getElementById("demo4").innerHTML =
-  Number.isSafeInteger(21) +
-  " and " +
-  Number.isSafeInteger(12345678901234567890);
+let i = 0;
+let text = "";
+while (people[i]) {
+  text += people[i] + "<br>";
+  i++;
+}
 
-//number method
+document.getElementById("demo4").innerHTML = text;
+
+// while loop
+
+var r = document.querySelector(":root");
+
+function myFunction_get() {
+  var rs = getComputedStyle(r);
+
+  alert("The value of --blue is: " + rs.getPropertyValue("--blue"));
+}
+
+function myFunction_set() {
+  r.style.setProperty("--blue", "lightblue");
+}
