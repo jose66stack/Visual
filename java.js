@@ -7,59 +7,44 @@ const Jenny = "23";
 const combined = John + Jan + Jim + Juan + Jenny;
 console.log(combined);
 
-function myFunction() {
-  let age = document.getElementById("age").value;
-  let voteable = age < 18 ? "Too young" : "Old enough";
-  document.getElementById("demo").innerHTML = voteable + " to drive.";
+const cities = ["New York", "Dallas", "Washington", "Seattle"];
+let flen = cities.length;
+
+let text = "<ul>";
+for (let i = 0; i < flen; i++) {
+  text += "<li>" + cities[i] + "</li>";
 }
+text += "</ul>";
 
-let day;
-switch (new Date().getDay()) {
-  case 0:
-    day = "Sunday";
-    break;
-  case 1:
-    day = "Monday";
-    break;
-  case 2:
-    day = "Tuesday";
-    break;
-  case 3:
-    day = "Wednesday";
-    break;
-  case 4:
-    day = "Thursday";
-    break;
-  case 5:
-    day = "Friday";
-    break;
-  case 6:
-    day = "Saturday";
-}
-document.getElementById("demo3").innerHTML = "Today is " + day;
+document.getElementById("demo").innerHTML = text;
+//Array
 
-let Text = "";
-for (let x = 2; x < 8; x++) {
-  Text += x + " days has passed" + "<br>";
-}
-document.getElementById("demo2").innerHTML = Text;
+const array1 = ["You", "Get"];
+const array2 = ["What", "You", "Settle"];
+const array3 = ["For"];
 
-//for loop
+const myChildren = array1.concat(array2, array3);
 
-const people = ["Rose", "Savannah", "Gabe", "Ferb"];
+document.getElementById("demo3").innerHTML = myChildren;
+//Array Method
 
-let i = 0;
-let text = "";
-while (people[i]) {
-  text += people[i] + "<br>";
-  i++;
-}
+const car = { type: "Toyota", model: "4Runner", color: "black", year: "2023" };
 
-document.getElementById("demo4").innerHTML = text;
+document.getElementById("demo2").innerHTML =
+  "The car type is " + car.type + " " + car.model + ", released in " + car.year;
+//Object
 
-// while loop
+const person = {
+  firstName: "Jose",
+  lastName: "Pineda",
+  id: 5567,
+  fullName: function () {
+    return this.firstName + " " + this.lastName;
+  },
+};
 
-var r = document.querySelector(":root");
+document.getElementById("demo4").innerHTML = person.fullName();
+//Object Method
 
 function myFunction_get() {
   var rs = getComputedStyle(r);
